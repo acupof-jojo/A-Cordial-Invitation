@@ -5,7 +5,7 @@ import { useGetEvents } from "../../hooks/useGetEvents";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../config/firebase-config";
 
-export const TestEvent = () => {
+export const CreateEvent = () => {
     const { addEvent } = useAddEvent();
     const { events = [], loading, error } = useGetEvents(); // Ensure `events` is defined, and handle loading/error states.
     const navigate = useNavigate();
@@ -54,9 +54,9 @@ export const TestEvent = () => {
 
     return (
         <>
-            <div className="test-event">
+            <div className="create-event">
                 <div className="container">
-                    <h1>Test Event Page</h1>
+                    <h1>Create Event Page</h1>
                     <button className="sign-out-button" onClick={signUserOut}>
                         Sign Out
                     </button>

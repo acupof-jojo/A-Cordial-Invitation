@@ -14,7 +14,7 @@ export const Auth = () => {
             isAuth: true,
           };
         localStorage.setItem("auth", JSON.stringify(authInfo));
-        navigate("/test-event");
+        navigate("/home");
     }
     return (
         <div className="login-page">
