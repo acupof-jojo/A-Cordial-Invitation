@@ -1,0 +1,72 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  .navbar-left .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-center .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-right {
+    list-style-type: none;
+    color: #fff;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links {
+    color: #fff;
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Aligns items horizontally */
+    gap: 1rem; /* Adds spacing between items */
+  }
+  
+  .nav-links li {
+    color: #fff;
+    display: inline; /* Ensures list items are inline */
+  }
+
+  .nav-links a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Sets link text to white */
+    font-size: 1rem;
+    font-weight: 500; /* Optional: Makes text semi-bold */
+    list-style: none; /* Removes bullet points */
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover */
+    color: #ddd; /* Optional: Changes text color on hover */
+    list-style: none; /* Removes bullet points */
+  }
+  
+  /* Profile photo styling */
+  .profile-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer; /* Indicates it's clickable */
+  }
+
+/* Ensures alignment within the navbar */
+.navbar-right .profile-photo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

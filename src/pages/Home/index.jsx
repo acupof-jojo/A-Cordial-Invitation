@@ -1,32 +1,15 @@
-import { useState } from "react";
-import { signOut } from "firebase/auth";
-import { useAddEvent } from "../../hooks/useAddEvent";
 import { useGetEvents } from "../../hooks/useGetEvents";
-import { useNavigate } from "react-router-dom";
-import { auth } from "../../config/firebase-config";
+import "./style.css";
+
 
 export const Home = () => {
     const { events = [], loading, error } = useGetEvents(); // Ensure `events` is defined, and handle loading/error states.
-    const navigate = useNavigate();
-
-    const signUserOut = async () => {
-        try {
-          await signOut(auth);
-          localStorage.clear();
-          navigate("/");
-        } catch (err) {
-          console.error(err);
-        }
-      };
 
     return (
         <>
             <div className="test-event">
                 <div className="container">
                     <h1>Home Page</h1>
-                    <button className="sign-out-button" onClick={signUserOut}>
-                        Sign Out
-                    </button>
                 </div>
             </div>
             <div className="events-created">
@@ -41,7 +24,12 @@ export const Home = () => {
                     <ul>
                         {events.map((event) => (
                             <li key={event.id}>
-                                <strong>{event.eventName}</strong>: {event.description}
+                                <h3><strong>{event.eventName}</strong><br/></h3>
+                                Description: {event.description}<br/>
+                                Location: {event.location}<br/> 
+                                Attire: {event.attire}<br/>
+                                Theme: {event.theme}<br/>
+                                Special Notes: {event.specialNotes}
                             </li>
                         ))}
                     </ul>
