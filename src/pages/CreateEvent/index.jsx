@@ -107,24 +107,6 @@ export const CreateEvent = () => {
                     </form>
                 </div>
             </div>
-            <div className="events-created">
-                <h3>Events Created</h3>
-                {loading ? (
-                    <p>Loading events...</p>
-                ) : error ? (
-                    <p>Error loading events: {error.message}</p>
-                ) : events.length === 0 ? (
-                    <p>No events have been created yet.</p>
-                ) : (
-                    <ul>
-                        {events.map((event) => (
-                            <li key={event.id}>
-                                <strong>{event.eventName}</strong>: {event.description}
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </div>
         </>
     );
 };
