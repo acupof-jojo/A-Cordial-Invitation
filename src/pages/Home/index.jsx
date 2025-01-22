@@ -1,19 +1,22 @@
 import { useGetEvents } from "../../hooks/useGetEvents";
 import "./style.css";
-
+import { useGetUserInfo } from "../../hooks/useGetUserInfo";
 
 export const Home = () => {
-    const { events = [], loading, error } = useGetEvents(); // Ensure `events` is defined, and handle loading/error states.
+    const { name, profilePhoto } = useGetUserInfo();
+    const { events = [], loading, error } = useGetEvents();
 
     return (
         <>
             <div className="test-event">
-                <div className="container">
-                    <h1>Home Page</h1>
-                </div>
+                {/* <div className="container"> */}
+                    <h2>   </h2>
+                    <img className="logo" src = "https://i.imgur.com/1k9FPmd.png" alt= "Logo"/>
+                    <h2>Welcome Back, {name}!</h2>
+                {/* </div> */}
             </div>
             <div className="events-created">
-                <h3>All Events</h3>
+                <h3>Your Events</h3>
                 {loading ? (
                     <p>Loading events...</p>
                 ) : error ? (

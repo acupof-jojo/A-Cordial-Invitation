@@ -7,7 +7,6 @@ import { auth } from "../../config/firebase-config";
 
 export const CreateEvent = () => {
     const { addEvent } = useAddEvent();
-    const { events = [], loading, error } = useGetEvents(); // Ensure `events` is defined, and handle loading/error states.
     const navigate = useNavigate();
 
     const [eventName, setEventName] = useState("");
@@ -57,9 +56,6 @@ export const CreateEvent = () => {
             <div className="create-event">
                 <div className="container">
                     <h1>Create Event Page</h1>
-                    <button className="sign-out-button" onClick={signUserOut}>
-                        Sign Out
-                    </button>
                     <div className="Event Creation">
                         <h3>Create your event:</h3>
                     </div>
