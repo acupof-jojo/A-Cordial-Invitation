@@ -10,13 +10,14 @@ export const Home = () => {
         <>
             <div className="test-event">
                 {/* <div className="container"> */}
-                    <h2>   </h2>
-                    <img className="logo" src = "https://i.imgur.com/1k9FPmd.png" alt= "Logo"/>
-                    <h2>Welcome Back, {name}!</h2>
+                    <br/>
+                    <br/>
+                    <h3>Welcome Back, {name}!</h3>
+                    <img className="logo" src = "https://i.imgur.com/KBh8x2c.png" alt= "Logo"/>
                 {/* </div> */}
             </div>
+            <h1>Your Events</h1>
             <div className="events-created">
-                <h3>Your Events</h3>
                 {loading ? (
                     <p>Loading events...</p>
                 ) : error ? (

@@ -1,0 +1,123 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7C936B;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  max-width: 100%; /* Prevents the navbar from extending beyond the screen */
+  overflow: hidden; /* Ensures no overflow happens */
+}
+
+/* Ensure the logo is on the left but doesn't expand unnecessarily */
+.navbar-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0; /* Prevents the left section from shrinking */
+}
+
+/* Add this to keep the left section from expanding on non-home pages */
+.navbar-left.show-logo {
+  flex: 0; /* Don't allow it to take extra space */
+}
+
+/* Styling for the logo */
+.navbar-left .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Right section with links and profile */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Styling for the links in the right section */
+.navbar-right a {
+  color: #DAF5C8;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.navbar-right .profile-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Hover effect for the links */
+.navbar-right a:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+.logo-pic {
+  height: 50px;
+  padding: 0px;
+}
+
+/* Media Queries for responsiveness */
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    padding: 0.5rem; /* Reduce padding */
+  }
+
+  .navbar-left {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem; /* Space between logo and other elements */
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .navbar-right a {
+    margin-bottom: 0.5rem; /* Space between links */
+  }
+
+  .navbar-left .logo {
+    font-size: 1.2rem; /* Smaller logo font size */
+  }
+
+  .navbar-right a {
+    font-size: 0.9rem; /* Smaller font size for links */
+  }
+
+  .navbar-right .profile-photo {
+    width: 25px;
+    height: 25px; /* Smaller profile photo */
+  }
+}
+
+/* For screens smaller than 480px (very small devices) */
+@media (max-width: 480px) {
+  .navbar-left .logo {
+    font-size: 1rem; /* Even smaller logo font size */
+  }
+
+  .navbar-right a {
+    font-size: 0.8rem; /* Smaller font size for links */
+  }
+
+  .navbar-right .profile-photo {
+    width: 20px; /* Further reduce the profile photo size */
+    height: 20px;
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/NavBar.css';
+import './style.css';
 import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase-config";
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -30,7 +30,7 @@ const NavBar = () => {
       <div className={`navbar-left ${location.pathname === "/home" ? "show-logo" : ""}`}>
         {location.pathname !== "/home" && (
           <span className="logo" onClick={handleLogoClick}>
-            <img src = "https://imgur.com/a/cnVnUMN" alt = "Logo"/>
+            <img className="logo-pic" src = "https://i.imgur.com/L0qDU55.png" alt = "Logo"/>
           </span>
         )}
       </div>

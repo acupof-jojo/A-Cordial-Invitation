@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { useAddEvent } from "../../hooks/useAddEvent";
-import { useGetEvents } from "../../hooks/useGetEvents";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../config/firebase-config";
+
+import "./style.css";
 
 export const CreateEvent = () => {
     const { addEvent } = useAddEvent();
@@ -55,50 +56,73 @@ export const CreateEvent = () => {
         <>
             <div className="create-event">
                 <div className="container">
-                    <h1>Create Event Page</h1>
+                    <h1>Create Your Event</h1>
                     <div className="Event Creation">
-                        <h3>Create your event:</h3>
                     </div>
                     <form className="add-event-response" onSubmit={submit}>
-                        <input
-                            type="text"
-                            placeholder="Event Name"
-                            value={eventName}
-                            required
-                            onChange={(e) => setEventName(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Description"
-                            value={description}
-                            required
-                            onChange={(e) => setDescription(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Location"
-                            value={location}
-                            required
-                            onChange={(e) => setLocation(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Attire"
-                            value={attire}
-                            onChange={(e) => setAttire(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Theme"
-                            value={theme}
-                            onChange={(e) => setTheme(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Special Notes"
-                            value={specialNotes}
-                            onChange={(e) => setSpecialNotes(e.target.value)}
-                        />
+                        <div className="form-group">
+                            <label htmlFor="eventName">Event Name</label>
+                            <input
+                                type="text"
+                                id="eventName"
+                                placeholder="Event Name"
+                                value={eventName}
+                                required
+                                onChange={(e) => setEventName(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="description">Description</label>
+                            <input
+                                type="text"
+                                id="description"
+                                placeholder="Description"
+                                value={description}
+                                required
+                                onChange={(e) => setDescription(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="location">Location</label>
+                            <input
+                                type="text"
+                                id="location"
+                                placeholder="Location"
+                                value={location}
+                                required
+                                onChange={(e) => setLocation(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="attire">Attire</label>
+                            <input
+                                type="text"
+                                id="attire"
+                                placeholder="Attire"
+                                value={attire}
+                                onChange={(e) => setAttire(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="theme">Theme</label>
+                            <input
+                                type="text"
+                                id="theme"
+                                placeholder="Theme"
+                                value={theme}
+                                onChange={(e) => setTheme(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="specialNotes">Special Notes</label>
+                            <input
+                                type="text"
+                                id="specialNotes"
+                                placeholder="Special Notes"
+                                value={specialNotes}
+                                onChange={(e) => setSpecialNotes(e.target.value)}
+                            />
+                        </div>
                         <button type="submit">Create Event</button>
                     </form>
                 </div>

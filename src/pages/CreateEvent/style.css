@@ -1,0 +1,108 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container Styles */
+.create-event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.create-event .container {
+    background-color: #DAF5C8; /* Background color updated to match the events section */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 60%;
+    border: 20px solid #7B926B;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #fff; /* Adjusted text color for better contrast */
+    margin-bottom: 20px;
+}
+
+.Event-Creation h3 {
+    text-align: center;
+    color: #fff; /* Adjusted text color for better contrast */
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.add-event-response {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-event-response .form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-event-response label {
+    font-size: 16px;
+    font-weight: bold;
+    width: 120px; /* Fixed width for label to keep alignment consistent */
+    text-align: right; /* Aligns label text to the right */
+}
+
+.add-event-response input {
+    width: 100%; /* Ensure inputs take the full width of their container */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.add-event-response input:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+.add-event-response button {
+    padding: 12px;
+    background-color: #7B926B;
+    color: #F5FEEB;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-event-response button:hover {
+    background-color: #869f74;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .Event-Creation h3 {
+        font-size: 18px;
+    }
+}
